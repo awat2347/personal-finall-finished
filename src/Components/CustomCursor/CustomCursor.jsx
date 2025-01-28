@@ -6,20 +6,24 @@ const CustomCursor = () => {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      setPosition({ x: e.pageX, y: e.pageY }); // Используем pageX и pageY
     };
 
-    document.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+
     return () => {
-      document.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
     <div
       className="custom-cursor"
-      style={{ left: `${position.x}px`, top: `${position.y}px` }}
-    ></div>
+      style={{
+        top: `${position.y}px`,
+        left: `${position.x}px`,
+      }}
+    />
   );
 };
 
