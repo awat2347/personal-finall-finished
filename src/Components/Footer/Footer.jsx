@@ -53,7 +53,7 @@ const Footer = () => {
   };
 
   return (
-    <footer>
+    <footer id='Contact'>
       <div className="container">
         <div className={s.wrapper}>
           <div className={s.Contact} data-aos="fade-up"> {}

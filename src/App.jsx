@@ -5,6 +5,7 @@ import About from './Components/About/About'
 import Skill from './Components/skill/Skill'
 import Projects from './Components/Projects/Projects'
 import Footer from './Components/Footer/Footer'
+import CustomCursor from './Components/CustomCursor/CustomCursor'
 const App = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const App = () => {
       <Skill/>
       <Projects/>
       <Footer/>
+      <CustomCursor/>
     </>
   )
 }
